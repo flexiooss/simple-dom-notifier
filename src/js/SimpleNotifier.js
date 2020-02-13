@@ -201,7 +201,12 @@ class SimpleNotifier {
     const el = document.createElement('div')
     fragment.appendChild(el)
     el.innerText = this.__config.message()
-    el.classList.add(this.__config.styles().color().primaryBg(), this.__config.styles().color().light(), this.__config.styles().fontSize().small())
+    el.classList.add(
+      this.__config.styles().color().primaryBg(),
+      this.__config.styles().color().light(),
+      this.__config.styles().fontSize().small(),
+      this.__config.styles().elements().tag()
+    )
     el.id = this.__id
     el.style.position = 'fixed'
     el.style.zIndex = '10000'
