@@ -163,13 +163,13 @@ class SimpleNotifier {
 
   /**
    *
-   * @return {Loading}
+   * @return {Notifying}
    */
   open() {
     const token = this.__sequence.nextID()
     this.__stack.add(token)
     this.__ensureView()
-    return new Loading(this, token)
+    return new Notifying(this, token)
   }
 
   /**
@@ -285,7 +285,7 @@ class SimpleNotifierPublic extends HotballoonService {
 
   /**
    *
-   * @return {Loading}
+   * @return {Notifying}
    */
   open() {
     return this[__simpleNotifier].open()
@@ -314,7 +314,7 @@ class SimpleNotifierPublic extends HotballoonService {
 }
 
 
-class Loading {
+class Notifying {
 
   /**
    *
