@@ -1,1 +1,1 @@
-export {SimpleNotifierBuilder} from './src/js/SimpleNotifier'
+export {SimpleNotifierBuilder,SERVICE_NAME} from './src/js/SimpleNotifier'

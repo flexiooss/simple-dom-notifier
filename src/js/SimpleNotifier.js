@@ -347,3 +347,6 @@ class Notifying {
     return this.__token
   }
 }
+
+
+export const SERVICE_NAME = SimpleNotifier.name()
