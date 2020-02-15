@@ -2,6 +2,15 @@ import {Sequence, UID} from '@flexio-oss/js-helpers'
 import {HotballoonService} from '@flexio-oss/hotballoon'
 
 
+const requestAFrame = window.requestAnimationFrame
+  || window.webkitRequestAnimationFrame
+  || window.mozRequestAnimationFrame
+  || window.msRequestAnimationFrame
+  || function(cb) {
+    return setTimeout(cb, 16)
+  }
+
+
 export class SimpleNotifierBuilder {
   /**
    *
@@ -128,10 +137,11 @@ class SimpleNotifier {
 
     /**
      *
-     * @type {HTMLDivElement}
+     * @type {?HTMLDivElement}
      * @private
      */
-    this.__element = this.__buildView()
+    this.__element = null
+    this.__buildView()
     /**
      *
      * @type {boolean}
@@ -193,7 +203,6 @@ class SimpleNotifier {
 
   /**
    *
-   * @return {HTMLDivElement}
    * @private
    */
   __buildView() {
@@ -215,8 +224,11 @@ class SimpleNotifier {
     el.style.padding = '0.3rem 0.8rem'
     el.style.transform = 'scale(0)'
     el.setAttribute('aria-hidden', 'true')
-    document.body.appendChild(fragment)
-    return el
+
+    requestAFrame(() => {
+      document.body.appendChild(fragment)
+    })
+    this.__element = el
   }
 
   __ensureView() {
@@ -235,8 +247,10 @@ class SimpleNotifier {
    * @private
    */
   __show() {
-    this.__element.style.transform = 'scale(1)'
-    this.__element.setAttribute('aria-hidden', 'false')
+    requestAFrame(() => {
+      this.__element.style.transform = 'scale(1)'
+      this.__element.setAttribute('aria-hidden', 'false')
+    })
     return this
   }
 
@@ -246,8 +260,10 @@ class SimpleNotifier {
    * @private
    */
   __hide() {
-    this.__element.style.transform = 'scale(0)'
-    this.__element.setAttribute('aria-hidden', 'true')
+    requestAFrame(() => {
+      this.__element.style.transform = 'scale(0)'
+      this.__element.setAttribute('aria-hidden', 'true')
+    })
     return this
   }
 }
