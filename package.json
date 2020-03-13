@@ -10,11 +10,11 @@
   "author": "Thomas Chatelain (https://github.com/TomAchT)",
   "repository": "https://github.com/flexiooss/simple-dom-notifi.git",
   "devDependencies": {
-    "code-altimeter-js": "https://github.com/flexiooss/code-altimeter-js.git"
+    "code-altimeter-js": "https://github.com/flexiooss/code-altimeter-js.git",
+    "@flexio-corp/js-hotballoon-parent": "0.2.0"
   },
   "peerDependencies": {},
   "dependencies": {
-    "@flexio-corp/js-hotballoon-parent": "0.2.0"
   },
   "hotballoon-shed": {
     "build": {
