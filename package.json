@@ -14,7 +14,7 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "@flexio-corp/hotballoon-common-parent": "0.2.0-dev"
+    "@flexio-corp/js-hotballoon-parent": "0.2.0"
   },
   "hotballoon-shed": {
     "build": {
