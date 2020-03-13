@@ -1,0 +1,33 @@
+{
+  "name": "@flexio-oss/simple-dom-notifier",
+  "description": "",
+  "main": "index.js",
+  "module": "index.js",
+  "version": "1.0.0",
+  "bugs": {
+    "url": "https://github.com/Flexio-corp/hbservice-environment/issues"
+  },
+  "author": "Thomas Chatelain (https://github.com/TomAchT)",
+  "repository": "https://github.com/flexiooss/simple-dom-notifi.git",
+  "devDependencies": {
+    "code-altimeter-js": "https://github.com/flexiooss/code-altimeter-js.git"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@flexio-corp/js-hotballoon-parent": "0.2.0"
+  },
+  "hotballoon-shed": {
+    "build": {
+      "builder": "webpack4"
+    },
+    "test": {
+      "tester": "code-altimeter-js",
+      "path": "src/test"
+    },
+    "generate-sources": {
+      "value-objects": {
+        "extension": ".spec"
+      }
+    }
+  }
+}
