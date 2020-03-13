@@ -3,7 +3,7 @@
   "description": "",
   "main": "index.js",
   "module": "index.js",
-  "version": "1.0.0-dev",
+  "version": "1.0.0",
   "bugs": {
     "url": "https://github.com/Flexio-corp/hbservice-environment/issues"
   },
