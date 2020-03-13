@@ -3,7 +3,7 @@
   "description": "",
   "main": "index.js",
   "module": "index.js",
-  "version": "1.1.0-dev",
+  "version": "1.1.0",
   "bugs": {
     "url": "https://github.com/Flexio-corp/hbservice-environment/issues"
   },
@@ -14,8 +14,7 @@
     "@flexio-corp/js-hotballoon-parent": "0.2.0"
   },
   "peerDependencies": {},
-  "dependencies": {
-  },
+  "dependencies": {},
   "hotballoon-shed": {
     "build": {
       "builder": "webpack4"
